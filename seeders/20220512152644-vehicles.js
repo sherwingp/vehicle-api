@@ -2,7 +2,7 @@
 
 module.exports = {
   async up (queryInterface, Sequelize) {
-   await queryInterface.bulkInsert('Vehicles', [{
+   await queryInterface.bulkInsert('vehicles', [{
      make: 'YAMAHA',
      model: 'VMX1700 V-MAX',
      createdAt: new Date(),
@@ -23,6 +23,6 @@ module.exports = {
   },
 
   async down (queryInterface, Sequelize) {
-    await queryInterface.bulkDelete('Vehicles', null, {});
+    await queryInterface.bulkDelete('vehicles', null, {});
   }
 };
