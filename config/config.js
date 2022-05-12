@@ -1,7 +1,9 @@
-{
+require('dotenv').config()
+
+module.exports = {
   "development": {
-    "username": "root",
-    "password": null,
+    "username": process.env.DB_USERNAME,
+    "password": process.env.DB_PASSWORD,
     "database": "vehicle_api_development",
     "host": "127.0.0.1",
     "dialect": "postgres"
@@ -9,7 +11,7 @@
   "test": {
     "username": "root",
     "password": null,
-    "database": "vehicle_api_test",
+    "database": "vehicle_database_test",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
@@ -18,6 +20,6 @@
     "password": null,
     "database": "database_production",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "postgres"
   }
 }
